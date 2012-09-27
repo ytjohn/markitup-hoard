@@ -1,0 +1,15 @@
+<!-- set specific -->
+<link rel="stylesheet" type="text/css" href="markitup/sets/textile/style.css" />
+<script type="text/javascript" src="markitup/sets/textile/set.js"></script>
+<!-- load settings -->
+
+<script language="javascript">
+    $(document).ready(function()    {
+        // localOptions = { };
+        localOptions = { previewInElement:'#output',
+            previewParserPath:	'markitup/sets/textile/parser/preview.php'
+        };
+        jQuery.extend(myTextileSettings, localOptions);
+        $('#multiSet').markItUp(myTextileSettings);
+    });
+</script>

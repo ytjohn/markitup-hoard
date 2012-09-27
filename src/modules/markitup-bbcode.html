@@ -1,0 +1,14 @@
+<!-- set specific -->
+<link rel="stylesheet" type="text/css" href="markitup/sets/bbcode/style.css" />
+<script type="text/javascript" src="markitup/sets/bbcode/set.js"></script>
+<!-- load settings -->
+<script language="javascript">
+    $(document).ready(function()    {
+        // localOptions = { };
+        localOptions = { previewInElement:'#output',
+            previewParserPath:	'markitup/sets/bbcode/parser/preview.php'
+        };
+        jQuery.extend(mySettings, localOptions);
+        $('#multiSet').markItUp(mySettings);
+    });
+</script>

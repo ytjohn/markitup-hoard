@@ -1,0 +1,15 @@
+<!-- set specific -->
+<link rel="stylesheet" type="text/css" href="markitup/sets/markdown/style.css" />
+<script type="text/javascript" src="markitup/sets/markdown/set.js"></script>
+<!-- load settings -->
+
+<script language="javascript">
+    $(document).ready(function()    {
+        // localOptions = { };
+        localOptions = { previewInElement:'#output',
+            previewParserPath:	'markitup/sets/markdown/parser/preview.php'
+        };
+        jQuery.extend(myMarkdownSettings, localOptions);
+        $('#multiSet').markItUp(myMarkdownSettings);
+    });
+</script>

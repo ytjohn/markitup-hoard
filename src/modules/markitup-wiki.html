@@ -1,0 +1,15 @@
+<!-- set specific -->
+<link rel="stylesheet" type="text/css" href="markitup/sets/wiki/style.css" />
+<script type="text/javascript" src="markitup/sets/wiki/set.js"></script>
+<!-- load settings -->
+
+<script language="javascript">
+    $(document).ready(function()    {
+        // localOptions = { };
+        localOptions = { previewInElement:'#output',
+            previewParserPath:	'markitup/sets/wiki/parser/preview.php'
+        };
+        jQuery.extend(myWikiSettings, localOptions);
+        $('#multiSet').markItUp(myWikiSettings);
+    });
+</script>

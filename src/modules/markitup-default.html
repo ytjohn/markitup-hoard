@@ -1,0 +1,12 @@
+<!-- set specific -->
+<link rel="stylesheet" type="text/css" href="markitup/sets/default/style.css" />
+<script type="text/javascript" src="markitup/sets/default/set.js"></script>
+<!-- load settings -->
+<script language="javascript">
+    $(document).ready(function()    {
+        // localOptions = { };
+        localOptions = { previewInElement:'#output' };
+        jQuery.extend(mySettings, localOptions);
+        $('#multiSet').markItUp(mySettings);
+    });
+</script>
