@@ -49,5 +49,5 @@ miu = {
 			heading += char;
 		}
 		return '\n'+heading;
-	}
+	},
 }

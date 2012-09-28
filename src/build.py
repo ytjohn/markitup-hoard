@@ -68,10 +68,14 @@ def MakeModule(config, module):
     Generates the output html from templates.
     """
     mylookup = TemplateLookup(directories=[config['templates'],
-                                           config['modules']])
-    top = mylookup.get_template(config['top']).render_unicode()
-    bottom = mylookup.get_template(config['bottom']).render_unicode()
-    set = mylookup.get_template(module).render_unicode()
+                                           config['modules']],
+        input_encoding='utf-8',
+        output_encoding='utf-8',
+        encoding_errors='replace'
+    )
+    top = mylookup.get_template(config['top']).render()
+    bottom = mylookup.get_template(config['bottom']).render()
+    set = mylookup.get_template(module).render()
     return ''.join([top, set, bottom])
 
 def UpdateModule(config, module):

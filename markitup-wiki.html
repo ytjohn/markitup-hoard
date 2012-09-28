@@ -29,7 +29,7 @@
 
 <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
 
-<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -37,18 +37,30 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </a>
-            <span class="brand"
-                  title="A complete markitup collection.">Markitup
-                Hoard</span>
+            <a href="#About" data-toggle="modal" class="brand"
+               title="A complete markitup collection.">markItUp! Hoard
+            </a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
-                    <li><a href="markitup-default.html">HTML</a></li>
-                    <li><a href="markitup-markdown.html">Markdown</a></li>
-                    <li><a href="markitup-markdownextra.html">Markdown
-                        Extra</a></li>
-                    <li><a href="markitup-textile.html">Textile</a></li>
-                    <li><a href="markitup-wiki.html">Wiki</a></li>
-                    <li><a href="markitup-bbcode.html">BBCode</a></li>
+                    <li id="markitup-default">
+                        <a href="markitup-default.html">HTML</a>
+                    </li>
+                    <li id="markitup-markdown">
+                        <a href="markitup-markdown.html">Markdown</a>
+                    </li>
+                    <li id="markitup-markdownextra">
+                        <a href="markitup-markdownextra">Markdown
+                            Extra</a>
+                    </li>
+                    <li>
+                        <a href="markitup-textile.html">Textile</a>
+                    </li>
+                    <li id="markitup-wiki">
+                        <a href="markitup-wiki.html">Wiki</a>
+                    </li>
+                    <li id="markitup-bbcode">
+                        <a href="markitup-bbcode.html">BBCode</a>
+                    </li>
 
                 </ul>
             </div><!--/.nav-collapse -->
@@ -85,6 +97,29 @@ Type here...
 
 </div> <!-- /container -->
 
+<!-- about dialog -->
+
+<div class="modal hide" id="About" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="AboutLabel">markItUp! Hoard</h3>
+    </div>
+    <div class="modal-body">
+	<em>markItUp! Hoard is a collection of markItUp! examples, sets, and parsers.</em>
+	<p>Source code can be downloaded from <a href="https://github.com/ytjohn/markitup-hoard">github</a></p>
+
+	<p><em>markItUp!</em> is copyright <a href="http://www.jaysalvat.com/">Jay Salvat</a>. Get more information on
+	<a href="http://markitup.jaysalvat.com/">http://markitup.jaysalvat.com/</a> or access the source code on <a href="https://github.com/markitup/1.x">github</a>.
+	</p>
+
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    </div>
+</div>
+<!-- end about dialog -->
+
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.1.min.js"><\/script>')</script>
 
@@ -99,7 +134,8 @@ else document.write('<script src="js/vendor/bootstrap.min.js"><\/script>') }
 <script type="text/javascript" src="markitup/jquery.markitup.js"></script>
 <link rel="stylesheet" type="text/css" href="markitup/skins/markitup/style-hoard.css" />
 
-<!-- end top --><!-- set specific -->
+<!-- end top -->
+<!-- set specific -->
 <link rel="stylesheet" type="text/css" href="markitup/sets/wiki/style.css" />
 <script type="text/javascript" src="markitup/sets/wiki/set.js"></script>
 <!-- load settings -->
@@ -113,5 +149,11 @@ else document.write('<script src="js/vendor/bootstrap.min.js"><\/script>') }
         jQuery.extend(myWikiSettings, localOptions);
         $('#multiSet').markItUp(myWikiSettings);
     });
-</script>    </body>
+
+    // set tag active
+    $("#markitup-wiki").addClass("active");
+
+</script>
+
+    </body>
 </html>

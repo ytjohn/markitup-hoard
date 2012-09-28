@@ -547,7 +547,6 @@
 						sp = 0;
 					}	
 					previewWindow.document.open();
-					previewWindow.document.write(previewWindow.name);
 					previewWindow.document.write(data);
 					previewWindow.document.close();
 					previewWindow.document.documentElement.scrollTop = sp;

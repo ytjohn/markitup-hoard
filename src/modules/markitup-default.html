@@ -4,9 +4,13 @@
 <!-- load settings -->
 <script language="javascript">
     $(document).ready(function()    {
-        // localOptions = { };
-        localOptions = { previewInElement:'#output' };
+        localOptions = { previewInElement:'#output',
+			 previewTemplatePath:	'~/templates/previewindom.html'};
         jQuery.extend(mySettings, localOptions);
         $('#multiSet').markItUp(mySettings);
     });
+
+    // set tag active
+    $("#markitup-default").addClass("active");
+
 </script>
